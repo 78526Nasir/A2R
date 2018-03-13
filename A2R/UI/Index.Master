@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="A2R.UI.Index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>A2R | Access To Routine</title>
+    <link href="../favicon.png" rel="shortcut icon" />
+    <!--Local bootstrap and font awesome CDN's-->
+    <link href="../LocalCDN/bootstrap.min.css" rel="stylesheet" />
+    <link href="../LocalCDN/fontawesome-all.min.css" rel="stylesheet" />
+
+    <!--Local script CDN's-->
+    <script src="../LocalCDN/jQuery3.3.1.min.js"></script>
+    <script src="../LocalCDN/fontawesome-all.min.js"></script>
+
+    <!--Hand written raw css-->
+    <link href="../Css/index.css" rel="stylesheet" />
+    <link href="../Css/about.css" rel="stylesheet" />
+    <link href="../Css/home.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header fixed">
+            <div class="wrapper">
+                <a class="a2r-brand" href="#"><h1>A2R</h1></a>
+                <nav class="menu">
+                    <ul>
+                        <li><a id="lnkHome" runat="server" href="Home.aspx">HOME</a></li>
+                        <li><a id="lnkRoutine" runat="server" href="Routine.aspx">ROUTINE</a></li>
+                        <li><a id="lnkAbout" runat="server" href="About.aspx">ABOUT</a></li>
+                        <li><a id="lnkHelp" runat="server" href="Help.aspx">HELP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+</body>
+</html>
