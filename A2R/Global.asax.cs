@@ -35,18 +35,35 @@ namespace A2R
         protected void Application_Error(object sender, EventArgs e)
         {
             Exception ex = Server.GetLastError();
+            ExceptionLogger.Log(ex);
+            DataBaseExceptionLogger.Log(ex);
 
-            if (ex != null)
+            HttpException httpException = new HttpException();
+            Exception unknownEx = new Exception();
+
+            try
             {
+                 httpException = (HttpException)ex;
+            }catch(Exception unknownException)
+            {
+                unknownEx = unknownException;
                 ExceptionLogger.Log(ex);
-
                 DataBaseExceptionLogger.Log(ex);
+            }
 
-                Server.ClearError();
+            int httpCode = httpException.GetHttpCode();
 
-                if (!Response.IsRequestBeingRedirected)
+            Server.ClearError();
+
+            if (!Response.IsRequestBeingRedirected)
+            {
+                if (httpCode == 404)
                 {
-                    Response.Redirect("~/ErrorsUI/Error.aspx");
+                    Response.Redirect("~/Errors_UI/PageNotFoundError.aspx");
+                }
+                else
+                {
+                    Response.Redirect("~/Errors_UI/Error.aspx");
                 }
             }
         }
