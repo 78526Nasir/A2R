@@ -6,7 +6,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.Office.Interop.Excel;
-using BusinessAccessLayer;
 
 namespace A2R.RootAdmin
 {
@@ -26,13 +25,9 @@ namespace A2R.RootAdmin
 
                 fuRoutineFile.SaveAs(fullPath);
 
-                RoutineCollector.CollectAllRoutines(fullPath);
-                List<RoutineSchema> getRoutineSchema = RoutineCollector.GetRoutineSchema();
+                Session["fullPath"] = fullPath;
 
-                foreach (RoutineSchema r in getRoutineSchema)
-                {
-                    lblStatus.Text = lblStatus.Text + "<b>Day:</b> " + r.GetDay() + "<b> Room: </b>" + r.GetClassRoomNumber() + "<b> Course Code:</b> " + r.GetCourseCode() + "<b> Teacher Initial: </b>" + r.GetTeacherInitial() +"<br/>";
-                }
+                Response.Redirect("~/Root/StartHarvesting.aspx");
             }
         }
 
@@ -69,15 +64,5 @@ namespace A2R.RootAdmin
             }
         }
 
-        private void ReadOne(string path)
-        {
-            Application excel = new Application();
-            Workbook wb = excel.Workbooks.Open(path, ReadOnly: true);
-            Worksheet excelSheet = wb.Worksheets.get_Item(1);
-
-            string test = excelSheet.Cells[1, 1].Value.ToString();
-            lblStatus.Text = test;
-            wb.Close();
-        }
     }
 }

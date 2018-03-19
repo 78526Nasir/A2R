@@ -7,32 +7,35 @@
     <title>Login</title>
     <meta charset="utf-8" />
     <meta name="author" content="Nasir Islam Sujan" />
-    
-    <style>
-        * {
-            box-sizing: border-box !important;
-        }
 
-    </style>
-    <link rel="stylesheet" href="../css/loginStyle.css" type="text/css" />
-
+    <link href="../LocalCDN/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href="../Css/adminlogin.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <h1 style="text-align: center; color: #777; font-family: Garamond;">Login to admin panel</h1>
+        <h1 class="title">Login to admin panel</h1>
 
         <div class="container">
-            <asp:Image ID="usericon" CssClass="img-style" ImageUrl="~/images/male_user.png" AlternateText="User Icon" runat="server" />
+            <asp:Image ID="usericon" CssClass="img-style" ImageUrl="../Images/avatar.png" AlternateText="User Icon" runat="server" />
             <br />
-            <asp:TextBox ID="txtUsername" CssClass="username" runat="server" placeholder="Enter username"></asp:TextBox>
+
+            <span class="fa fa-user relative"></span>
+            <asp:TextBox ID="txtUsername" CssClass="text-field" runat="server" placeholder="Enter username"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfv1" runat="server" ErrorMessage="Username required" ControlToValidate="txtUsername">&nbsp;</asp:RequiredFieldValidator>
+            <span id="unAlert" class="alert-1">&#9888;</span>
             <br />
-            <asp:TextBox ID="txtPassword" CssClass="password" runat="server" placeholder="Enter password" TextMode="Password"></asp:TextBox>
+
+            <span class="fa fa-lock relative"></span>
+            <asp:TextBox ID="txtPassword" CssClass="text-field" runat="server" placeholder="Enter password" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfv2" runat="server" ErrorMessage="Password required" ControlToValidate="txtPassword">&nbsp;</asp:RequiredFieldValidator>
+            <span id="pAlert" class="alert-2">&#9888;</span>
             <br />
-            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="LoginButtonClickPerformed" />
+
+            <asp:Button ID="btnLogin" runat="server" CssClass="btn-login" Text="Login" OnClick="LoginButtonClickPerformed" />
             <br />
             <br />
+
             <asp:Label ID="lblStatus" CssClass="label" runat="server"></asp:Label>
         </div>
 
@@ -40,5 +43,7 @@
             <asp:ValidationSummary ID="vs1" runat="server" />
         </div>
     </form>
+
+    <script src="../LocalCDN/jQuery3.3.1.min.js"></script>
 </body>
 </html>
