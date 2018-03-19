@@ -4,7 +4,7 @@ A class routine finder.
 > Desktop version:  https://github.com/AccessToRoutine
 
 > Documentation link: https://sites.google.com/diu.edu.bd/a2r
-=======
+
 # A2R
 A class routine finder that can find out specific class `schedule/routine` :calendar: for any students of my *Software Engineering* department.
 It basically read the Excel `.xlsx` routine file and than filter out all the routines :clock1: 
