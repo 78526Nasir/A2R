@@ -1,0 +1,91 @@
+﻿@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../Fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Medium';
+    src: url('../Fonts/Ubuntu-Medium.ttf') format('truetype');
+}
+
+.con{
+    min-height:300px;
+    width: 550px;
+    padding: 10px;
+    margin: 130px auto;
+    background:white;
+    text-align:center;
+    box-sizing:border-box;
+    box-shadow:0 2px 2px 0 rgba(0,0,0,0.15),
+                0 2px 3px 0 rgba(0,0,0,0.15),
+                0 2px 2px -2px rgba(0,0,0,0.2);
+}
+
+.btn-s{
+    margin-top:90px;
+}
+
+#lblInfo , #lblSuccess{
+    color: #333;
+    font-size: 12px;
+    font-family: 'OpenSans-Regular';
+    padding-left: 20px;
+}
+
+.warn , .success{
+    width: 100%;
+    text-align: left;
+    height: 35px;
+    background:  #ffc;
+    line-height: 35px;
+    border-left: 6px solid #ffdc8e;
+    box-sizing:  border-box;
+    display:none;
+}
+
+.load {
+    text-align:center;
+    height: 50px;
+    width: 50px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #666;
+    border-radius: 50%;
+    background: #fff;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.load-con{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+    display:none;
+    margin-bottom:30px;
+}
+
+.success{
+    display:block;
+    border-color:#4ca;
+    background:#a8efdd;
+}
