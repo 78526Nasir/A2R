@@ -24,11 +24,22 @@
     <form id="form1" runat="server">
         <div class="header fixed">
             <div class="wrapper">
-                <a class="a2r-brand" href="#"><h1>A2R</h1></a>
+                <a class="a2r-brand" href="#">
+                    <h1>A2R</h1>
+                </a>
                 <nav class="menu">
                     <ul>
                         <li><a id="lnkHome" runat="server" href="Home.aspx">HOME</a></li>
-                        <li><a id="lnkRoutine" runat="server" href="Routine.aspx">ROUTINE</a></li>
+                        <li class="h-dropdown">
+                            <a id="lnkRoutine" runat="server" href="#">ROUTINE&nbsp; <span class="caret"></span></a>
+                            <div class="h-dropdown-content">
+                                <a href="#">By Course Code</a>
+                                <a href="#">By Semester</a>
+                                <a href="#">Batch Routine</a>
+                                <a href="#">Teacher's Routine</a>
+                                <a href="#">Free ClassRoom</a>
+                            </div>
+                        </li>
                         <li><a id="lnkAbout" runat="server" href="About.aspx">ABOUT</a></li>
                         <li><a id="lnkHelp" runat="server" href="Help.aspx">HELP</a></li>
                     </ul>
@@ -39,6 +50,10 @@
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="i-footer">
+
         </div>
     </form>
 

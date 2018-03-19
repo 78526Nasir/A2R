@@ -4,17 +4,18 @@
     <div class="main-content">
         <div class="a2r-container">
             <div class="content">
-                
+
                 <h3 style="margin-top: 15px;">Routine By Semester</h3>
                 <p>
                     <i>Routine By Semester</i> will allows users to find their current semester routine. To find routine for current <code>semester</code>, 
                     users needs to select their current <code>semester</code> and <code>section</code>. 
                     After that user needs to click on <kbd class="roboto">GENERATE ROUTINE</kbd>.
-                    <br /><br />
+                    <br />
+                    <br />
                     Providing only <code>semester</code> will brings up the whole <i>Batch Routine</i>. To filter the generated routine further more user needs 
                     to select a <code>section</code> in order to get a specific section routine. To find specific semester routine click <a href="#" target="_blank">here</a>.
                 </p>
-                
+
                 <h3>Routine By Course Code</h3>
                 <p>
                     <i>Routine By Course Code</i> will allow users to find out any courses routine. It will also allows user to find multiple courses routine at the same time.
