@@ -67,8 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\about.css" />
+    <Content Include="Css\adminlogin.css" />
+    <Content Include="Css\controlpage.css" />
     <Content Include="Css\home.css" />
     <Content Include="Css\index.css" />
+    <Content Include="Css\startharvest.css" />
     <Content Include="ErrorsUI\Error.aspx" />
     <Content Include="ErrorsUI\LargeUploadError.aspx" />
     <Content Include="ErrorsUI\PageNotFoundError.aspx" />
@@ -119,12 +122,33 @@
     <Compile Include="Root\AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Root\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Root\ControlPage.aspx.cs">
       <DependentUpon>ControlPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Root\ControlPage.aspx.designer.cs">
       <DependentUpon>ControlPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Redirect.aspx.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Redirect.aspx.designer.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\StartHarvesting.aspx.cs">
+      <DependentUpon>StartHarvesting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\StartHarvesting.aspx.designer.cs">
+      <DependentUpon>StartHarvesting.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -182,7 +206,6 @@
     <Content Include="Fonts\Ubuntu-Medium.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Script\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +219,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Root\Redirect.aspx" />
+    <Content Include="Root\StartHarvesting.aspx" />
     <Content Include="UI\About.aspx" />
     <Content Include="UI\Help.aspx" />
     <Content Include="UI\Home.aspx" />
@@ -217,6 +242,7 @@
     <Content Include="Fonts\Roboto-ThinItalic.ttf" />
     <Content Include="Fonts\RammettoOne-Regular.ttf" />
     <Content Include="Fonts\Acme-Regular.ttf" />
+    <Content Include="Root\AdminMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
