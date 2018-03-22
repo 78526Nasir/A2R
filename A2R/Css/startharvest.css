@@ -12,12 +12,12 @@
     min-height:300px;
     width: 550px;
     padding: 10px;
-    margin: 130px auto;
-    background:white;
+    margin: 80px auto;
+    background: #333;
     text-align:center;
     box-sizing:border-box;
-    box-shadow:0 2px 2px 0 rgba(0,0,0,0.15),
-                0 2px 3px 0 rgba(0,0,0,0.15),
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15), 
+                0 2px 3px 0 rgba(0,0,0,0.15), 
                 0 2px 2px -2px rgba(0,0,0,0.2);
 }
 
@@ -25,9 +25,9 @@
     margin-top:90px;
 }
 
-#lblInfo , #lblSuccess{
+#ABContent_lblInfo , #ABContent_lblSuccess{
     color: #333;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'OpenSans-Regular';
     padding-left: 20px;
 }
@@ -36,9 +36,9 @@
     width: 100%;
     text-align: left;
     height: 35px;
-    background:  #ffc;
+    background: #d8b385c7;
     line-height: 35px;
-    border-left: 6px solid #ffdc8e;
+    border-left: 6px solid #fdd099;
     box-sizing:  border-box;
     display:none;
 }
@@ -47,10 +47,10 @@
     text-align:center;
     height: 50px;
     width: 50px;
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #666;
+    border: 8px solid #1d1d1d;
+    border-top: 8px solid #7d7d7d;
     border-radius: 50%;
-    background: #fff;
+    background: #333333;
     animation: spin 2s linear infinite;
     -webkit-animation: spin 2s linear infinite;
 }
@@ -77,7 +77,7 @@
 
 
 .load-con{
-    display:flex;
+    /* display:flex; */
     justify-content:center;
     margin-top:20px;
     display:none;
@@ -86,6 +86,6 @@
 
 .success{
     display:block;
-    border-color:#4ca;
-    background:#a8efdd;
+    border-color: #68ffc9;
+    background: #71ab89;
 }

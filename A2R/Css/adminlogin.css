@@ -173,22 +173,21 @@ p a:hover{
     box-shadow:0px 0px 5px rgba(245,78,34,0.4);
 }
 
-.alert-1{
-    position:absolute;
-    top:120px;
-    right:70px;
-    color:red;
-    font-weight:bold;
-    visibility:hidden;
+.pnl-status{
+    margin: auto;
+    width: 95%;
+    height: 35px;
+    background: #ffaaaa;
+    border-left: 6px solid #f75f75;
+    text-align: left;
+    padding-left: 15px;
+    box-sizing: border-box;
+    display:none;
 }
 
-.alert-2{
-    position:absolute;
-    top:195px;
-    right:70px;
-    color:red;
-    font-weight:bold;
-    visibility:hidden;
+.label{
+    font:normal 13px 'OpenSans-Regular';
+    line-height: 35px;
 }
 
 @media screen and (max-width:400px){

@@ -9,26 +9,24 @@ body {
     background:#f1f1f1;
 }
 
-.container{
+.cp-container{
     height: 350px;
     width: 550px;
     padding: 0px 10px;
     padding-top: 120px;
-    margin: 130px auto;
-    background:white;
+    margin: 60px auto;
+    background: #333333;
     text-align:center;
     box-sizing:border-box;
-    box-shadow:0 2px 2px 0 rgba(0,0,0,0.15),
-                0 2px 3px 0 rgba(0,0,0,0.15),
-                0 2px 2px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15), 0 2px 3px 0 rgba(0,0,0,0.15), 0 2px 2px -2px rgba(0,0,0,0.2);
 }
 
 .btn-upload{
     height:40px;
     width:140px;
     margin-top: 40px;
-    background:white;
-    border:1px solid #aaa;
+    background: #5d5d5d;
+    border: 1px solid #1f1f1f;
     color:black;
     border-radius:3px;
     outline:none;
@@ -39,14 +37,14 @@ body {
 }
 
 .btn-upload:hover{
-    background:#f1f1f1;
+    background: #464646;
     box-shadow:0px 0px 5px rgba(0,0,0,0.2);
 }
 
 .choose-file{
-    border: 1px solid #bbb;
+    border: 1px solid #1f1f1f;
     padding: 6px 25px;
-    background: #f8f9fa;
+    background: #5d5d5d;
     font:bold 16px calibri;
     position:relative;
     z-index:1;
@@ -69,6 +67,23 @@ body {
 }
 
 .status-label{
-    font: bold 12px consolas;
-    color: #ff6262;
+    font-family: 'OpenSans-Regular', calibri;
+    font-size: 13px;
+    line-height:35px;
+}
+
+.status-panel{
+    width:100%;
+    background: #ffaaaa;
+    height:35px;
+    border-left: 6px solid #f75f75;
+    box-sizing:border-box;
+    text-align:left;
+    padding-left:10px;
+    margin-top: 40px;
+    display: none;
+}
+
+.btn-middle{
+    margin-top:120px !important;
 }
