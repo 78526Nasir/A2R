@@ -8,14 +8,43 @@
     <link href="../Css/adminlogin.css" rel="stylesheet" />
     <link href="../Css/controlpage.css" rel="stylesheet" />
     <link href="../Css/startharvest.css" rel="stylesheet" />
+    <link href="../Css/index.css" rel="stylesheet" />
+    <link href="../Css/adminmaster.css" rel="stylesheet" />
 </head>
-<body>
+<body class="admin-body">
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            
-        </asp:ContentPlaceHolder>
-    </div>
+        <div class="header fixed up">
+            <div class="wrapper">
+                <a class="a2r-brand a-a" href="#">
+                    <h1 class="a-title admin-title">A2R | <span>Admin Panel</span></h1>
+                </a>
+                <nav class="menu a-menu">
+                    <ul>
+                        <li><a id="lnkHome" runat="server" href="#">UPLOAD</a></li>
+                        <li><a id="lnkAbout" runat="server" href="#">ABOUT</a></li>
+                        <li><a id="lnkHelp" runat="server" href="#">LOGOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="a-container">
+            <asp:ContentPlaceHolder ID="ABContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
+
+    <script src="../LocalCDN/jQuery-3.2.1.js"></script>
+    <script>
+        $(function () {
+            $("#ABContent_btnStartReading").on("click", function () {
+                $(this).val("Reading Started..");
+                $("#ABContent_SuccessDiv").css("display", "none");
+                $("#ABContent_WarnDiv").css("display", "block");
+                $("#ABContent_LoadDiv").css("display", "flex");
+            });
+        });
+
+    </script>
 </body>
 </html>

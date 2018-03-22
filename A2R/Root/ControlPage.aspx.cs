@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.Office.Interop.Excel;
+using BusinessAccessLayer;
 
 namespace A2R.RootAdmin
 {
@@ -13,7 +14,10 @@ namespace A2R.RootAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                mvUploadReadAndStore.ActiveViewIndex = 0;
+            }
         }
 
         protected void btnUploadRoutine_Click(object sender, EventArgs e)
@@ -23,46 +27,78 @@ namespace A2R.RootAdmin
                 string path = Server.MapPath("~/Uploads/");
                 string fullPath = path + fuRoutineFile.FileName;
 
+                Session["fullPath"] = fullPath;
                 fuRoutineFile.SaveAs(fullPath);
 
-                Session["fullPath"] = fullPath;
-
-                Response.Redirect("~/Root/StartHarvesting.aspx");
+                mvUploadReadAndStore.ActiveViewIndex = 1;
             }
         }
 
         private bool IsValidFile()
         {
-            if (fuRoutineFile.HasFile)
+            if (Page.IsValid)
             {
-                string fileExtension = Path.GetExtension(fuRoutineFile.FileName);
-
-                if (fileExtension.ToLower() != ".xls" && fileExtension.ToLower() != ".xlsx")
+                if (fuRoutineFile.HasFile)
                 {
-                    lblStatus.Text = "Only file with .xls or .xlsx are allowed";
-                    return false;
-                }
-                else
-                {
+                    string fileExtension = Path.GetExtension(fuRoutineFile.FileName);
 
-                    int fileSize = fuRoutineFile.PostedFile.ContentLength;
-                    if (fileSize > 5242880) //5242880 => 5MB
+                    if (fileExtension.ToLower() != ".xls" && fileExtension.ToLower() != ".xlsx")
                     {
-                        lblStatus.Text = "File size must less than 5MB";
+                        panelStatus.Style.Add("display", "block");
+                        lblStatus.Text = "Only file with .xls or .xlsx are allowed";
                         return false;
                     }
                     else
                     {
-                        return true;
+
+                        int fileSize = fuRoutineFile.PostedFile.ContentLength;
+                        if (fileSize > 5242880) //5242880 => 5MB
+                        {
+                            panelStatus.Style.Add("display", "block");
+                            lblStatus.Text = "File size must less than 5MB";
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
                     }
                 }
-            }
-            else
+                else
+                {
+                    panelStatus.Style.Add("display", "block");
+                    lblStatus.Text = "Please select a file";
+                    return false;
+                }
+            }else
             {
+                panelStatus.Style.Add("display", "block");
                 lblStatus.Text = "Please select a file";
                 return false;
             }
         }
 
+        protected void StartReading(object sender, EventArgs e)
+        {
+            RoutineCollector.CollectAllRoutines(Session["fullPath"].ToString());
+
+            mvUploadReadAndStore.ActiveViewIndex = 2;
+        }
+
+        protected void btnStoreAndContinue_Click(object sender, EventArgs e)
+        {
+            List<RoutineSchema> routineSchemas = RoutineCollector.GetRoutineSchema();
+
+            foreach(RoutineSchema rs in routineSchemas)
+            {
+                rs.SetCourseCode(rs.GetCourseCode().Replace(" ", ""));
+            }
+
+            A2RBusinessModel a2rBM = new A2RBusinessModel();
+
+            a2rBM.InsertAllRecords(routineSchemas);
+
+            Response.Redirect("~/Root/Redirect.aspx"); //TODO prev records
+        }
     }
 }
