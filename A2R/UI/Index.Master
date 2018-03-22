@@ -6,13 +6,10 @@
 <head runat="server">
     <title>A2R | Access To Routine</title>
     <link href="../favicon.png" rel="shortcut icon" />
+
     <!--Local bootstrap and font awesome CDN's-->
     <link href="../LocalCDN/bootstrap.min.css" rel="stylesheet" />
     <link href="../LocalCDN/fontawesome-all.min.css" rel="stylesheet" />
-
-    <!--Local script CDN's-->
-    <script src="../LocalCDN/jQuery3.3.1.min.js"></script>
-    <script src="../LocalCDN/fontawesome-all.min.js"></script>
 
     <!--Hand written raw css-->
     <link href="../Css/index.css" rel="stylesheet" />
@@ -53,9 +50,11 @@
         </div>
 
         <div class="i-footer">
-
         </div>
     </form>
 
+    <!--Local script CDN's-->
+    <script src="../LocalCDN/jQuery3.3.1.min.js"></script>
+    <script src="../LocalCDN/fontawesome-all.min.js"></script>
 </body>
 </html>
