@@ -38,11 +38,17 @@ namespace DataAccessLayer
 
             } while (exception != null);
 
-            if (EventLog.SourceExists("ATR"))
+            try
             {
-                EventLog eventLog = new EventLog("ATRLogs");
-                eventLog.Source = "ATR";
-                eventLog.WriteEntry(sbExceptionMessage.ToString(), EventLogEntryType.Error);
+                if (EventLog.SourceExists("ATR"))
+                {
+                    EventLog eventLog = new EventLog("ATRLogs");
+                    eventLog.Source = "ATR";
+                    eventLog.WriteEntry(sbExceptionMessage.ToString(), EventLogEntryType.Error);
+                }
+            }catch(Exception ex)
+            {
+                //TODO
             }
         }
     }
