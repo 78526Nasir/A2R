@@ -4,6 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Application Error</title>
+    <link href="../favicon.png" rel="shortcut icon" />
+
     <style>
         
         @font-face{

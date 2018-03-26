@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>LargeUploadError</title>
+    <title>Large Upload File</title>
+    <link href="../favicon.png" rel="shortcut icon" />
+
     <style>
         @font-face {
             font-family: 'OpenSans-Light';

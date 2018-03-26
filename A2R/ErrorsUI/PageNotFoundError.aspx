@@ -6,6 +6,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Page Not Found</title>
+    <link href="../favicon.png" rel="shortcut icon" />
+
     <style>
         @font-face {
             font-family: 'OpenSans-Light';
@@ -23,12 +25,12 @@
             color: #ff6666;
             font-size: 70px;
             text-align: center;
+            margin-bottom: 0px;
         }
 
         .f-h1{
             font-size: 100px;
-            margin-bottom: 0px;
-            margin-top: 180px;
+            margin-top: 150px;
         }
     </style>
 </head>
@@ -37,8 +39,12 @@
         <div>
             <h1 class="h1 f-h1">404!</h1>
             <h1 class="h1">PAGE NOT FOUND!</h1>
+            <h1 class="h1"><i class="far fa-frown"></i></h1>
         </div>
     </form>
+
+    <!-- Local CDN-->
+    <script src="../LocalCDN/fontawesome-all.min.js"></script>
 </body>
 </html>
 
