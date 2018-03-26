@@ -1,0 +1,34 @@
+﻿.cc-table{
+    margin:30px auto;
+    border-collapse:collapse;  
+    border-style:hidden;
+    border-radius:2px;
+}
+
+.cc-table, .cc-table td, .cc-table th{
+    text-align:center;
+}
+
+.cc-table ,.cc-table td, .cc-table th{
+    border:1px solid #ccc;
+}
+
+.cc-table th, .blank{
+    background:#f1f1f1;
+}
+
+.cc-table td:last-child, .cc-table th:last-child{
+    padding:10px 100px;
+}
+
+.cc-table td:first-child, .cc-table th:first-child{
+    padding:10px 50px;
+}
+
+.cc-table td:hover{
+    background:#f9f9f9;
+}
+
+.blank:hover{
+    background:#f1f1f1 !important;
+}
