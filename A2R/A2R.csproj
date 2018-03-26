@@ -68,7 +68,9 @@
   <ItemGroup>
     <Content Include="Css\about.css" />
     <Content Include="Css\adminlogin.css" />
+    <Content Include="Css\adminmaster.css" />
     <Content Include="Css\controlpage.css" />
+    <Content Include="Css\coursecurriculam.css" />
     <Content Include="Css\home.css" />
     <Content Include="Css\index.css" />
     <Content Include="Css\startharvest.css" />
@@ -78,7 +80,7 @@
     <Content Include="favicon.png" />
     <Content Include="Fonts\LICENSE.txt" />
     <Content Include="Global.asax" />
-    <Content Include="Images\avatar.png" />
+    <Content Include="Images\avatar1.png" />
     <Content Include="LocalCDN\bootstrap.min.css" />
     <Content Include="LocalCDN\bootstrap.min.js" />
     <Content Include="LocalCDN\fontawesome-all.min.css" />
@@ -143,12 +145,12 @@
     <Compile Include="Root\Redirect.aspx.designer.cs">
       <DependentUpon>Redirect.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Root\StartHarvesting.aspx.cs">
-      <DependentUpon>StartHarvesting.aspx</DependentUpon>
+    <Compile Include="Root\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Root\StartHarvesting.aspx.designer.cs">
-      <DependentUpon>StartHarvesting.aspx</DependentUpon>
+    <Compile Include="Root\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -156,6 +158,13 @@
     </Compile>
     <Compile Include="UI\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CourseCurriculam.aspx.cs">
+      <DependentUpon>CourseCurriculam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CourseCurriculam.aspx.designer.cs">
+      <DependentUpon>CourseCurriculam.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Help.aspx.cs">
       <DependentUpon>Help.aspx</DependentUpon>
@@ -220,8 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Root\Redirect.aspx" />
-    <Content Include="Root\StartHarvesting.aspx" />
+    <Content Include="Root\WebForm1.aspx" />
     <Content Include="UI\About.aspx" />
+    <Content Include="UI\CourseCurriculam.aspx" />
     <Content Include="UI\Help.aspx" />
     <Content Include="UI\Home.aspx" />
     <Content Include="UI\Routine.aspx" />
