@@ -1,9 +1,11 @@
 # A2R
 A class routine finder.
 
-> Desktop version:  https://github.com/AccessToRoutine
+> Desktop version repo:  https://github.com/78526Nasir/AccessToRoutine
 
-> Documentation link: https://sites.google.com/diu.edu.bd/a2r
+> Documentation link (Desktop version): https://sites.google.com/diu.edu.bd/a2r
+
+> Video Documentation: https://www.youtube.com/watch?v=658dF4Ml7S8
 
 > Web version: Underconstruction
 
