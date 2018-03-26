@@ -78,7 +78,7 @@ html input[disabled]
 }
 
 code{
-    background: #f5f6f7;
+    background: #f1f2f3;
     color:black;
 }
 
@@ -178,7 +178,7 @@ after-login{
 }
 
 
-@media screen and (max-width:405px){
+@media screen and (max-width:420px){
     .menu{
         float:none;
     }
@@ -194,3 +194,8 @@ after-login{
 }
 
 
+@media screen and (max-width:310px){
+    .menu li a{
+        padding:0px 7px;
+    }
+}
