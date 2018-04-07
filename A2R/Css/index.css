@@ -68,9 +68,14 @@ h1, h2, h3, h4, h5, h6, body, ul{
     padding:0;
 }
 
-a, a:hover, a:focus, a:visited, a:active{
+a:visited{
     text-decoration:none !important;
 }
+
+a:link, a:hover, a:focus{
+    text-decoration:none !important;
+}
+
 
 html input[disabled]
 {
@@ -80,6 +85,7 @@ html input[disabled]
 code{
     background: #f1f2f3;
     color:black;
+    white-space:nowrap;
 }
 
 .wrapper{
@@ -138,6 +144,7 @@ code{
     font-family:'Roboto-Medium',OpenSans-Bold, Calibri;
     padding:0px 10px;
     line-height:60px;
+    white-space:  nowrap;
 }
 
 .menu li a:hover{
@@ -152,10 +159,6 @@ code{
 .user-avatar{
     height:60px;
     padding: 7px;
-}
-
-after-login{
-    
 }
 
 .menu-enable{
@@ -177,6 +180,53 @@ after-login{
     margin-bottom: 50px;
 }
 
+.i-footer{
+    min-height: 80px;
+    text-align: center;
+    background: #ececec;
+    padding-top: 10px;
+}
+
+.footer-ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+.footer-ul li{
+    display:inline-block;
+}
+
+.footer-ul li a{
+    display:block;
+    padding:10px 20px;
+    color:#666;
+    font-family:'Roboto-Medium', Calibri;
+}
+
+.footer-ul li a:hover{
+    color:#000;
+}
+
+.i-footer p{
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'OpenSans-SemiBold', Calibri;
+    color: #666;
+    border-bottom: 5px solid #007959;
+    border-top: 1px solid #ccc;
+}
+
+.i-footer p a{
+    white-space:nowrap;
+    font-family:'OpenSans-Bold', Calibri;
+    color:#444;
+}
+
+.i-footer p a:hover{
+    color:#000;
+}
 
 @media screen and (max-width:420px){
     .menu{

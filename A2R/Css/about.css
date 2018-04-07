@@ -1,8 +1,9 @@
 ﻿.content{
-    padding:20px 20px 30px 20px;
+    padding: 20px 30px 50px 30px;
     background: #fff;
     /* border-radius: 3px; */
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.15), 0 2px 2px -2px rgba(0,0,0,0.3);
+    overflow-x:auto;
 }
 
 .a2r-title{

@@ -3,8 +3,9 @@
 }
 
 .a-title span{
-    font-family:'OpenSans-Light';
-    color:#777;
+    font-family: 'OpenSans-Semibold';
+    color: #8a8a8a;
+    font-size: 20px;
 }
 
 .a-a:hover h1{
@@ -13,7 +14,8 @@
 
 .up{
     z-index:3;
-    background:#313131;
+    background:#353535;
+    /* box-sizing:  border-box; */
 }
 
 .admin-title{
@@ -24,8 +26,34 @@
 
 .a-menu li a{
     color:#757575 !important;
+    font: bold 16px calibri;
+    line-height: 60px;
 }
 
 .a-menu li a:hover{
     color:#aaa !important;
+}
+
+.admin-name{
+    float:right;
+    color: #e2e2e2;
+    font-size:13px;
+    padding: 7px 7px 7px 25px;
+    margin: 16px 0px;
+    box-sizing:  border-box;
+    background: #585858;
+    border-radius: 3px;
+}
+
+@media screen and (max-width:425px)
+{
+    .a-info{
+        float:left !important;
+    }
+}
+
+@media screen and (max-width:275px){
+    .main-content{
+        padding-top:200px !important;
+    }
 }

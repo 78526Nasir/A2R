@@ -24,7 +24,7 @@
 
 .cart{
     width: 370px;
-    min-height: 235px;
+    min-height: 265px;
     background: white;
     margin: 15px 12px;
     padding: 20px;
@@ -72,7 +72,7 @@
 
 .cart-body{
     margin-top:10px;
-    min-height:99px;
+    min-height: 120px;
     color:black;
 }
 
@@ -183,7 +183,7 @@
 
 .footer a:hover{
     text-decoration:underline !important;
-    color:#1166bb;
+    color: #0f5092;
 }
 
 .a-disable{
@@ -195,32 +195,6 @@
     text-decoration:none !important;
     color:#797979 !important;
 }
-
-@media screen and (max-width:400px){
-    .footer{
-        text-align:center;
-    }
-    .footer a{
-        display:block;
-        float:none;
-    }
-}
-
-@media screen and (max-width:385px){
-    .wrapper{
-        width:95% !important;
-    }
-    .home-container{
-        width:100% !important;
-    }
-}
-
-@media screen and (max-width:345px){
-    .right-float{
-        display:none;
-    }
-}
-
 
 .h-dropdown{
     position:relative;
@@ -251,4 +225,48 @@
 
 .h-dropdown:hover .h-dropdown-content{
     display:grid;
+}
+
+@media screen and (max-width:355px){
+    .footer{
+        text-align:center;
+    }
+    .footer a{
+        display:block;
+        float:none;
+    }
+}
+
+@media screen and (max-width:395px){
+    .wrapper{
+        width:95% !important;
+    }
+    .home-container{
+        width:100% !important;
+    }
+    .a2r-container{
+        width:90%;
+    }
+}
+
+@media screen and (max-width:345px){
+    .right-float span{
+        font-size:11px;
+    }
+    .cart h1{
+        font-size:16px;
+    }
+    .cart-body ul li{
+        font-size:11.5px;
+    }
+    .cart-body p{
+        font-size:13px;
+    }
+}
+
+
+@media screen and (max-width:312px){
+    .right-float{
+        display:none;
+    }
 }
