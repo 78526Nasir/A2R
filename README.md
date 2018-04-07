@@ -1,9 +1,13 @@
 # A2R
 A class routine finder.
 
-> Desktop version:  https://github.com/AccessToRoutine
+> Desktop version repo:  https://github.com/78526Nasir/AccessToRoutine
 
-> Documentation link: https://sites.google.com/diu.edu.bd/a2r
+> Documentation link (Desktop version): https://sites.google.com/diu.edu.bd/a2r
+
+> Video Documentation: https://www.youtube.com/watch?v=658dF4Ml7S8
+
+> Web version: Underconstruction
 
 ## About A2R
 A class routine finder that can find out specific class `schedule/routine` :calendar: for any students of my *Software Engineering* department.
@@ -15,12 +19,6 @@ It basically read the Excel `.xlsx` routine file and than filter out all the rou
 - Batch Routine
 - Teacher's Routine
 - ClassRoom For Mackup Class
-
-> Desktop version:  https://github.com/AccessToRoutine
-
-> Documentation link: https://sites.google.com/diu.edu.bd/a2r
-
-> Web version: Underconstruction
 
 
 ### LICENSE and Copyright
