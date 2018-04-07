@@ -36,15 +36,16 @@ namespace A2R
         {
             Exception ex = Server.GetLastError();
             ExceptionLogger.Log(ex);
-            DataBaseExceptionLogger.Log(ex);
+            // DataBaseExceptionLogger.Log(ex); //TODO
 
             HttpException httpException = new HttpException();
             Exception unknownEx = new Exception();
 
             try
             {
-                 httpException = (HttpException)ex;
-            }catch(Exception unknownException)
+                httpException = (HttpException)ex;
+            }
+            catch (Exception unknownException)
             {
                 unknownEx = unknownException;
                 ExceptionLogger.Log(ex);
@@ -55,16 +56,25 @@ namespace A2R
 
             Server.ClearError();
 
-            if (!Response.IsRequestBeingRedirected)
+            //if (!Response.IsRequestBeingRedirected)
+            //{
+            //    if (httpCode == 404)
+            //    {
+            //        Response.Redirect("~/ErrorsUI/PageNotFoundError.aspx");
+            //    }
+            //    else
+            //    {
+            //        Response.Redirect("~/ErrorsUI/Error.aspx");
+            //    }
+            //}
+
+            if (httpCode == 404)
             {
-                if (httpCode == 404)
-                {
-                    Response.Redirect("~/Errors_UI/PageNotFoundError.aspx");
-                }
-                else
-                {
-                    Response.Redirect("~/Errors_UI/Error.aspx");
-                }
+                Server.Transfer("~/ErrorsUI/PageNotFoundError.aspx");
+            }
+            else
+            {
+                Server.Transfer("~/ErrorsUI/Error.aspx");
             }
         }
 
