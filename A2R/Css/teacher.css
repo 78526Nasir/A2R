@@ -1,0 +1,158 @@
+﻿.center {
+    text-align: center;
+}
+
+.patent-color {
+    color: #007959;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ddl, .btn-generate, .btn-download {
+    height: 40px;
+    width: 220px;
+    outline: none;
+    background: white;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    font: bold 16px calibri;
+    transition: all 0.33s ease-in-out;
+    cursor: pointer;
+    margin: 10px 10px 20px 10px;
+    text-transform:uppercase;
+}
+
+.tt{
+    text-transform:capitalize;
+}
+
+.ddl:focus{
+    border: 1px solid #255255;
+    box-shadow: 0 0 0 3px rgba(40,40,40,0.2);
+}
+
+.btn-generate {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    border: 1px solid black;
+}
+
+.btn-generate:hover {
+    color: white;
+    border: 1px solid #000;
+    background: #000;
+}
+
+
+.m-height {
+    min-height: 500px;
+    padding-bottom: 70px;
+}
+
+.margin {
+    margin: 20px 0px;
+}
+
+.routine {
+    background:white;
+    overflow-x:auto;
+    padding: 20px;
+}
+
+.rfv-label {
+    color: #ff4444;
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.gen-table, .gen-table td, .gen-table th {
+    border: 1px solid #c9c9c9;
+    border-collapse: collapse;
+    text-align: center;
+    margin:auto;
+    white-space:nowrap;
+    /* width: 100%; */
+}
+
+.gen-table tr:nth-child(odd){
+    background:#fafafa;
+}
+
+.gen-table tr:first-child{
+    background:#f5f5f5;
+}
+
+.gen-table tr:hover:not(:first-child){
+    background:#fafafa;
+}
+
+.gen-table td, .gen-table th{
+    padding: 12px 30px;
+}
+
+.lg-padding td, .lg-padding th{
+    padding:12px 77px;
+}
+
+.ddl{
+    text-indent:10px;
+    display:block;
+    box-sizing:border-box;
+}
+.ddl option{
+    padding:10px;
+    display:block;
+}
+
+.ddl option:hover{
+    padding:10px;
+    background:rgb(30,144,255);
+}
+
+.btn-download{
+    color:#007959 !important;
+    border:1px solid #007959;
+    display:none;
+    margin:auto;
+    line-height:40px;
+    margin-top:30px;
+}
+
+.btn-download:hover{
+    background:#007959;
+    color:white !important;
+}
+
+.td-padding{
+    background-color: #fff;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    margin:10px;
+}
+
+.td-padding td{
+    padding:2px 26px;
+    padding-top:10px;
+}
+
+@media screen and (max-width:600px){
+    .gen-table{
+        font-size:12px;
+    }
+    .gen-table td{
+        padding:5px 10px;
+    }
+    .routine{
+        padding-left:0px;
+        padding-right:0px;
+    }
+}
