@@ -41,9 +41,12 @@ namespace DataAccessLayer
         /// <returns>return SqlParameter object</returns>
         public static SqlParameter AddParameter(string parameterName, object value)
         {
+            value = value == null ? DBNull.Value : value;
+
             try
             {
                 SqlParameter parameter = new SqlParameter(parameterName, value);
+                
                 return parameter;
 
             }catch(Exception ex)
