@@ -11,13 +11,7 @@ namespace E_Commerce_Site.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["IsError"] == null)
-            {
-                Response.Redirect("~/ErrorsUI/PageNotFoundError.aspx");
-            }else
-            {
-                // Show the Page
-            }
+
         }
     }
 }

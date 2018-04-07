@@ -13,9 +13,6 @@
             font-family: 'OpenSans-Light';
             src: url('../fonts/OpenSans-Light.ttf') format('truetype');
         }
-        body{
-            background:#f9f9f9;
-        }
         h1{
             font-family:'OpenSans-Light', Calibri;
             font-weight:normal;
