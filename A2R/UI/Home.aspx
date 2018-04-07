@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/Index.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="A2R.UI.Home" %>
+﻿<%@ Page Title="A2R | Home" Language="C#" MasterPageFile="~/UI/Index.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="A2R.UI.Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main-content">
         <div class="info">
-            <span>This routine is effective from </span><asp:Label ID="lblDate" CssClass="date" runat="server">19/3/2018</asp:Label>.
+            <span>This routine is effective from </span><asp:Label ID="lblDate" CssClass="date" runat="server"></asp:Label>.
         </div>
 
         <div class="home-container">
@@ -19,14 +19,16 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Computer Fundamentals</li>
+                        <li>Computer Fundamentals Lab</li>
+                        <li>Introduction to Software Engineering</li>
+                        <li>English Reading, Writing Skills & Public Speaking</li>
+                        <li>Art of Living</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="btnFirstSRoutine" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnFirstSRoutine" runat="server" Text="View Routine" OnClick="btnFirstSRoutine_Click" />
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
@@ -42,21 +44,22 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>English Language</li>
+                        <li>Mathematics-I (Calculus and Differential Equations)</li>
+                        <li>Software Requirement Analysis and Design</li>
+                        <li>Programming Language with Lab</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button1" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnSSR" runat="server" Text="View Routine" OnClick="btnSSR_Click"/>
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
             <!--Third Semester-->
             <div class="cart lightblue">
                 <div class="cart-head">
-                    <h1>Three Semester</h1>
+                    <h1>Third Semester</h1>
                     <div class="right-float">
                         <span>Total Section</span>
                         <kbd runat="server" class="kbd3" id="kbd3">1</kbd>
@@ -65,21 +68,22 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Mathematics-2</li>
+                        <li>Software Engineering Project-1</li>
+                        <li>Data Structure with Lab</li>
+                        <li>Statistics & Probability</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button2" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnTSR" runat="server" Text="View Routine" OnClick="btnTSR_Click"/>
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
             <!--Four Semester-->
             <div class="cart orange">
                 <div class="cart-head">
-                    <h1>Four Semester</h1>
+                    <h1>Fourth Semester</h1>
                     <div class="right-float">
                         <span>Total Section</span>
                         <kbd runat="server" class="kbd4" id="kbd4">1</kbd>
@@ -88,21 +92,21 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Java Programming with Lab</li>
+                        <li>Computer Algorithms with Lab</li>
+                        <li>Introduction to Database with Lab</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button3" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnFSR" runat="server" Text="View Routine" OnClick="btnFSR_Click"/>
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
             <!--Five Semester-->
             <div class="cart darkblue">
                 <div class="cart-head">
-                    <h1>Five Semester</h1>
+                    <h1>Fifth Semester</h1>
                     <div class="right-float">
                         <span>Total Section</span>
                         <kbd runat="server" class="kbd5" id="kbd5">1</kbd>
@@ -111,14 +115,15 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Object Oriented Concept & Design with Lab</li>
+                        <li>Software Engineering Quality Assurance & Testing</li>
+                        <li>Digital Electronics with Lab</li>
+                        <li>Discrete Mathematics</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button4" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnFiSR" runat="server" Text="View Routine" OnClick="btnFiSR_Click" />
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
@@ -134,14 +139,15 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Documentation of Software Engineering</li>
+                        <li>Operating System with Lab</li>
+                        <li>Software Project Management</li>
+                        <li>Principle of Accounting</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button5" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnSixS" runat="server" Text="View Routine" OnClick="btnSixS_Click" />
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
@@ -157,14 +163,15 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>System Analysis and Design</li>
+                        <li>Theory of Computing</li>
+                        <li>Software Security</li>
+                        <li>.NET Programming with Lab</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button6" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnSevenS" runat="server" Text="View Routine" OnClick="btnSevenS_Click"/>
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
@@ -180,14 +187,15 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Data Communication with Lab</li>
+                        <li>Desktop and Web Programming with Lab</li>
+                        <li>Computer Architecture & Organization</li>
+                        <li>Software Engineering and Cyber Laws</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button7" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnESR" runat="server" Text="View Routine" OnClick="btnESR_Click" />
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
@@ -203,14 +211,15 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Management Information System</li>
+                        <li>Object Oriented Software Development</li>
+                        <li>Numerical Analysis with Lab</li>
+                        <li>Artificial Intelligence with Lab</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button8" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnNSR" runat="server" Text="View Routine" OnClick="btnNSR_Click"/>
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
@@ -226,14 +235,15 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Advance Database Management System with Lab</li>
+                        <li>Telecommunication Engineering with Lab</li>
+                        <li>Distributive Computing and Network Security with Lab</li>
+                        <li>Software Engineering Project 2 (Web Programming)</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button9" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnTenSR" runat="server" Text="View Routine" OnClick="btnTenSR_Click" />
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
@@ -249,14 +259,14 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Software Enginnering Project 2(Web based)</li>
-                        <li>Distributive Computing and Network Security</li>
-                        <li>Telecommunication With Lab</li>
-                        <li>Advance Database With Lab</li>
+                        <li>Business Communication</li>
+                        <li>Multimedia Programming with Lab</li>
+                        <li>Project/Thesis</li>
                     </ul>
                 </div>
                 <div class="footer">
-                    <asp:Button ID="Button10" runat="server" Text="View Routine" />
+                    <asp:Button ID="btnElevenSR" runat="server" Text="View Routine" OnClick="btnElevenSR_Click" />
+                    <a href="FAQ.aspx">Wrong courses info showing?</a>
                 </div>
             </div>
 
@@ -272,12 +282,13 @@
                 <div class="cart-body">
                     <p>Courses Info</p>
                     <ul>
-                        <li>Project/Thesis</li>
+                        <li>Project/Thesis (continuing)</li>
 
                     </ul>
                 </div>
                 <div class="footer">
                     <asp:Button ID="btnDisable" CssClass="btn-disable" runat="server" Text="View Routine" Enabled="false" />
+                    <a class="a-disable" style="text-decoration:none !important">Wrong courses info showing?</a>
                 </div>
             </div>
         </div>

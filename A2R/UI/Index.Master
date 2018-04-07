@@ -1,24 +1,38 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="A2R.UI.Index" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title>A2R | Access To Routine</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nasir Islam Sujan">
+
     <link href="../favicon.png" rel="shortcut icon" />
+
+    <!--- CDN's -->
+    <%--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" />--%>
+    <%--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />--%>
+
 
     <!--Local bootstrap and font awesome CDN's-->
     <link href="../LocalCDN/bootstrap.min.css" rel="stylesheet" />
     <link href="../LocalCDN/fontawesome-all.min.css" rel="stylesheet" />
 
+
     <!--Hand written raw css-->
     <link href="../Css/index.css" rel="stylesheet" />
     <link href="../Css/about.css" rel="stylesheet" />
     <link href="../Css/home.css" rel="stylesheet" />
+    <link href="../Css/coursecurriculam.css" rel="stylesheet" />
+    <link href="../Css/teacher.css" rel="stylesheet" />
+    <link href="../Css/courseCode.css" rel="stylesheet" />
 
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="scriptMgr" runat="server"></asp:ScriptManager>
         <div class="header fixed">
             <div class="wrapper">
                 <a class="a2r-brand" href="#">
@@ -28,13 +42,13 @@
                     <ul>
                         <li><a id="lnkHome" runat="server" href="Home.aspx">HOME</a></li>
                         <li class="h-dropdown">
-                            <a id="lnkRoutine" runat="server" href="#">ROUTINE&nbsp; <span class="caret"></span></a>
+                            <a id="lnkRoutine" runat="server" href="#">ROUTINE <span class="caret"></span></a>
                             <div class="h-dropdown-content">
-                                <a href="#">By Course Code</a>
-                                <a href="#">By Semester</a>
-                                <a href="#">Batch Routine</a>
-                                <a href="#">Teacher's Routine</a>
-                                <a href="#">Free ClassRoom</a>
+                                <a id="lnkRBCC" runat="server" href="RoutineByCourseCode.aspx">By Course Code</a>
+                                <a id="lnkRBS" runat="server" href="RoutineBySemester.aspx">By Semester</a>
+                                <a id="lnkRBR" runat="server" href="BatchRoutine.aspx">Batch Routine</a>
+                                <a id="lnkRTR" runat="server" href="TeachersRoutine.aspx">Teacher's Routine</a>
+                                <a id="lnkRFC" runat="server" href="FreeClassRoom.aspx">Free ClassRoom</a>
                             </div>
                         </li>
                         <li><a id="lnkAbout" runat="server" href="About.aspx">ABOUT</a></li>
@@ -50,11 +64,31 @@
         </div>
 
         <div class="i-footer">
+            <div class="wrapper">
+                <ul class="footer-ul">
+                    <li><a href="FAQ.aspx">FAQ</a></li>
+                    <li><a href="About.aspx">ABOUT</a></li>
+                    <li><a href="Help.aspx">HELP</a></li>
+                </ul>
+            </div>
+            <p>This project is designed and developed by <a href="https://github.com/78526Nasir" target="_blank">Nasir Islam Sujan</a> &copy;</p>
         </div>
     </form>
 
+
+    <!-- CDN's -->
+    <%--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>--%>
+    <%--<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>--%>
+    <%--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>--%>
+
     <!--Local script CDN's-->
-    <script src="../LocalCDN/jQuery3.3.1.min.js"></script>
+    <script src="../LocalCDN/jQuery-3.2.1.js"></script>
     <script src="../LocalCDN/fontawesome-all.min.js"></script>
+    <script src="../LocalCDN/html2canvas.min.js"></script>
+
+    <!-- Hand written raw script -->
+    <script src="../Script/download.js"></script>
+    <script src="../Script/script.js"></script>
+
 </body>
 </html>
