@@ -20,6 +20,8 @@ It basically read the Excel `.xlsx` routine file and than filter out all the rou
 - Teacher's Routine
 - ClassRoom For Mackup Class
 
+> **Business Access Layer** and all other business logics are not shared in repo due to my `patents`
+
 
 ### LICENSE and Copyright
 This project is LICENSE under [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
