@@ -11,7 +11,7 @@ namespace A2R.UI
 {
 
 
-    public partial class Routine
+    public partial class FAQ
     {
     }
 }
