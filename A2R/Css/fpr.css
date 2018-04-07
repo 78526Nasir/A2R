@@ -1,0 +1,83 @@
+﻿@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+body {
+    background: #f9f9f9;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 550px;
+    height: 310px;
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 150px;
+    background: white;
+    box-shadow: 0px 2px 3px 0 rgba(0,0,0,0.2);
+}
+
+.text-box {
+    height: 40px;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    outline: none;
+    padding-left: 20px;
+    color: #262c3a;
+    font: bold 16px garamond;
+    border: 1px solid #f88;
+    border-radius: 3px;
+    transition: all 0.33s ease-in-out;
+}
+
+    .text-box:focus {
+        border: 1px solid #f25246;
+        box-shadow: 0 0 0 3px rgba(240, 40, 40, 0.25);
+    }
+
+.button {
+    height: 40px;
+    width: 150px;
+    margin-bottom: 20px;
+    border: 1px solid #f25246;
+    background: white;
+    border-radius: 3px;
+    font: bold 16px garamond;
+    outline: none;
+    color: #f25246;
+    transition: all 0.33s ease-in-out;
+}
+
+    .button:hover {
+        cursor: pointer;
+        background: #f25246;
+        color: white;
+    }
+
+.label {
+    font: bold 12px consolas;
+    color: green;
+}
+
+.validation {
+    text-align: center;
+    font: bold 12px consolas;
+    color: red;
+}
+
+.container h1 {
+    color: #f25246;
+}
+
+.success {
+    width: 100%;
+    text-align: center;
+    margin-top: 270px;
+    font-size: 40px;
+    color: #49ad55;
+    font-family:'OpenSans-Light', Calibri;
+}
