@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/Index.Master" AutoEventWireup="true" CodeBehind="CourseCurriculam.aspx.cs" Inherits="A2R.UI.CourseCurriculam" %>
+﻿<%@ Page Title="A2R | Course Curriculam" Language="C#" MasterPageFile="~/UI/Index.Master" AutoEventWireup="true" CodeBehind="CourseCurriculam.aspx.cs" Inherits="A2R.UI.CourseCurriculam" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main-content">
         <div class="a2r-container">
             <div class="content">
                 <div style="overflow-x: auto">
-                    <table class="cc-table">
+                    <table class="gen-table cc-table" style="margin-top:30px">
                         <!-- Table head row-->
                         <tr>
                             <th>Level</th>
@@ -95,7 +95,7 @@
                         <tr>
                             <td><b>SWE211</b> : Introduction to Database with Lab</td>
                         </tr>
-                        
+
                         <!-- Blank Row -->
                         <tr class="blank">
                             <td>&nbsp;
@@ -210,8 +210,8 @@
                         <tr>
                             <td><b>SWE424</b> : Artificial Intelligence with Lab</td>
                         </tr>
-                       
-                         <!-- Blank Row -->
+
+                        <!-- Blank Row -->
                         <tr class="blank">
                             <td>&nbsp;
                             </td>
@@ -234,7 +234,7 @@
                             <td><b>SWE332</b> : Software Engineering Project 2 (Web Programming)</td>
                         </tr>
 
-                          <!-- Blank Row -->
+                        <!-- Blank Row -->
                         <tr class="blank">
                             <td>&nbsp;
                             </td>
@@ -252,6 +252,20 @@
                         </tr>
                         <tr>
                             <td><b>SWE439</b> : Project/Thesis</td>
+                        </tr>
+
+                        <!-- Blank Row -->
+                        <tr class="blank">
+                            <td>&nbsp;
+                            </td>
+                            <td>&nbsp;
+                            </td>
+                        </tr>
+
+                        <!-- Level-4, Term-3 -->
+                        <tr>
+                            <td rowspan="3"><b>Level-4, Term-3</b></td>
+                            <td><b>SWE439</b> : Project/Thesis (continuing)</td>
                         </tr>
 
                     </table>

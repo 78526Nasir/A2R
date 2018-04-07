@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/Index.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="A2R.UI.About" %>
+﻿<%@ Page Title="A2R | About" Language="C#" MasterPageFile="~/UI/Index.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="A2R.UI.About" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main-content">
