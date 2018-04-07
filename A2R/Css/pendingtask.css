@@ -1,0 +1,45 @@
+﻿.calendar{
+    height: 40px;
+    width: 250px;
+    background: #5d5d5d;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font: bold 16px calibri;
+    text-transform: uppercase;
+    padding-left: 15px;
+    outline: none;
+    box-sizing: border-box;
+    transition:all 0.33s ease-in-out;
+    color:#ccc;
+    margin:20px;
+}
+
+.calendar:hover{
+    background:#444;
+}
+
+
+.calendar::-webkit-inner-spin-button {
+    height:38px;
+    background:#000;
+
+}
+
+.calendar::-webkit-calendar-picker-indicator{
+    font-size:16px;
+    padding:20px 10px;
+    color:#444;
+    z-index:1;
+}
+
+.h3{
+    margin:10px;
+    color:#999;
+    font-family:'OpenSans-Light', Calibri;
+    font-weight:normal;
+}
+
+.error{
+    font:normal 12px 'OpenSans-Regular';
+    color:#ff6262;
+}
