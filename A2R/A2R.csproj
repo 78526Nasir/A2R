@@ -69,11 +69,17 @@
     <Content Include="Css\about.css" />
     <Content Include="Css\adminlogin.css" />
     <Content Include="Css\adminmaster.css" />
+    <Content Include="Css\adminpanel.css" />
+    <Content Include="Css\changepassword.css" />
     <Content Include="Css\controlpage.css" />
+    <Content Include="Css\courseCode.css" />
     <Content Include="Css\coursecurriculam.css" />
+    <Content Include="Css\fpr.css" />
     <Content Include="Css\home.css" />
     <Content Include="Css\index.css" />
+    <Content Include="Css\pendingtask.css" />
     <Content Include="Css\startharvest.css" />
+    <Content Include="Css\teacher.css" />
     <Content Include="ErrorsUI\Error.aspx" />
     <Content Include="ErrorsUI\LargeUploadError.aspx" />
     <Content Include="ErrorsUI\PageNotFoundError.aspx" />
@@ -85,11 +91,15 @@
     <Content Include="LocalCDN\bootstrap.min.js" />
     <Content Include="LocalCDN\fontawesome-all.min.css" />
     <Content Include="LocalCDN\fontawesome-all.min.js" />
+    <Content Include="LocalCDN\html2canvas.min.js" />
     <Content Include="LocalCDN\jQuery-3.2.1.js" />
-    <Content Include="LocalCDN\jQuery3.3.1.min.js" />
     <Content Include="packages.config" />
     <Content Include="Root\AdminLogin.aspx" />
-    <Content Include="Root\ControlPage.aspx" />
+    <Content Include="Root\AdminPanel.aspx" />
+    <Content Include="Root\Done.aspx" />
+    <Content Include="Root\MailConfirm.aspx" />
+    <Content Include="Root\PendingTask.aspx" />
+    <Content Include="Root\UploadRoutine.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ErrorsUI\Error.aspx.cs">
@@ -116,6 +126,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Libraries\HashingAndSalting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Root\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
@@ -131,12 +142,40 @@
     <Compile Include="Root\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="Root\ControlPage.aspx.cs">
-      <DependentUpon>ControlPage.aspx</DependentUpon>
+    <Compile Include="Root\AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Root\ControlPage.aspx.designer.cs">
-      <DependentUpon>ControlPage.aspx</DependentUpon>
+    <Compile Include="Root\AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\Done.aspx.cs">
+      <DependentUpon>Done.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\Done.aspx.designer.cs">
+      <DependentUpon>Done.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\MailConfirm.aspx.cs">
+      <DependentUpon>MailConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\MailConfirm.aspx.designer.cs">
+      <DependentUpon>MailConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\PendingTask.aspx.cs">
+      <DependentUpon>PendingTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\PendingTask.aspx.designer.cs">
+      <DependentUpon>PendingTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\UploadRoutine.aspx.cs">
+      <DependentUpon>UploadRoutine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\UploadRoutine.aspx.designer.cs">
+      <DependentUpon>UploadRoutine.aspx</DependentUpon>
     </Compile>
     <Compile Include="Root\Redirect.aspx.cs">
       <DependentUpon>Redirect.aspx</DependentUpon>
@@ -145,13 +184,6 @@
     <Compile Include="Root\Redirect.aspx.designer.cs">
       <DependentUpon>Redirect.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Root\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Root\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UI\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -159,12 +191,47 @@
     <Compile Include="UI\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI\BatchRoutine.aspx.cs">
+      <DependentUpon>BatchRoutine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BatchRoutine.aspx.designer.cs">
+      <DependentUpon>BatchRoutine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\CourseCurriculam.aspx.cs">
       <DependentUpon>CourseCurriculam.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\CourseCurriculam.aspx.designer.cs">
       <DependentUpon>CourseCurriculam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root\ForgetPasswordRedirect.aspx.cs">
+      <DependentUpon>ForgetPasswordRedirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root\ForgetPasswordRedirect.aspx.designer.cs">
+      <DependentUpon>ForgetPasswordRedirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FreeClassRoom.aspx.cs">
+      <DependentUpon>FreeClassRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FreeClassRoom.aspx.designer.cs">
+      <DependentUpon>FreeClassRoom.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Help.aspx.cs">
       <DependentUpon>Help.aspx</DependentUpon>
@@ -187,12 +254,33 @@
     <Compile Include="UI\Index.Master.designer.cs">
       <DependentUpon>Index.Master</DependentUpon>
     </Compile>
-    <Compile Include="UI\Routine.aspx.cs">
-      <DependentUpon>Routine.aspx</DependentUpon>
+    <Compile Include="UI\RoutineByCourseCode.aspx.cs">
+      <DependentUpon>RoutineByCourseCode.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\Routine.aspx.designer.cs">
-      <DependentUpon>Routine.aspx</DependentUpon>
+    <Compile Include="UI\RoutineByCourseCode.aspx.designer.cs">
+      <DependentUpon>RoutineByCourseCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RoutineBySemester.aspx.cs">
+      <DependentUpon>RoutineBySemester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\RoutineBySemester.aspx.designer.cs">
+      <DependentUpon>RoutineBySemester.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TeachersRoutine.aspx.cs">
+      <DependentUpon>TeachersRoutine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TeachersRoutine.aspx.designer.cs">
+      <DependentUpon>TeachersRoutine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewRoutine.aspx.cs">
+      <DependentUpon>ViewRoutine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ViewRoutine.aspx.designer.cs">
+      <DependentUpon>ViewRoutine.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -229,12 +317,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Root\Redirect.aspx" />
-    <Content Include="Root\WebForm1.aspx" />
+    <Content Include="Script\download.js" />
+    <Content Include="Script\script.js" />
     <Content Include="UI\About.aspx" />
+    <Content Include="UI\BatchRoutine.aspx" />
+    <Content Include="Root\ChangePassword.aspx" />
     <Content Include="UI\CourseCurriculam.aspx" />
+    <Content Include="UI\FAQ.aspx" />
+    <Content Include="Root\ForgetPasswordRedirect.aspx" />
+    <Content Include="UI\FreeClassRoom.aspx" />
     <Content Include="UI\Help.aspx" />
     <Content Include="UI\Home.aspx" />
-    <Content Include="UI\Routine.aspx" />
+    <Content Include="UI\RoutineByCourseCode.aspx" />
+    <Content Include="UI\RoutineBySemester.aspx" />
+    <Content Include="UI\TeachersRoutine.aspx" />
+    <Content Include="UI\ViewRoutine.aspx" />
     <Content Include="Web.config" />
     <Content Include="Root\Web.config" />
     <Content Include="UI\Index.Master" />
