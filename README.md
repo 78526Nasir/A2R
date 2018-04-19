@@ -1,5 +1,5 @@
 # A2R
-A class routine finder.
+A class routine finder  :calendar: :clock1:
 
 ### Desktop Version
   * Repository [link](https://github.com/78526Nasir/AccessToRoutine)
