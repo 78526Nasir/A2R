@@ -19,7 +19,7 @@ It basically read the Excel `.xlsx` routine file and than filter out all the rou
 - Routine By Course Code
 - Batch Routine
 - Teacher's Routine
-- ClassRoom For Mackup Class
+- ClassRoom For Makeup Class
 
 
 > Business Access Layer and all other business logics are not shared in repo due to my **patents**.
