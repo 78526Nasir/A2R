@@ -8,7 +8,8 @@ A class routine finder. :calendar: :clock1:
 
 ### Web Version
 Fully Complete [![Complete](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-
+ * Documentation [link](https://sites.google.com/view/a2r/home)
+ * Video Documentation [link](#)
 ## About A2R
 A class routine finder that can find out specific class `schedule/routine` :calendar: for any students of my *Software Engineering* department.
 It basically read the Excel `.xlsx` routine file and than filter out all the routines :clock1: 
